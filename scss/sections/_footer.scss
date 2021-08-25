@@ -1,0 +1,143 @@
+.footer {
+  .footer__body {
+    background-color: $footerBg;
+    padding: 50px 0;
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .footer__content {
+      &:nth-child(2) {
+        @include maxWidth(767px) {
+          width: 40%;
+        }
+
+        @include maxWidth(575px) {
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
+
+      &:nth-child(3) {
+        @include maxWidth(767px) {
+          width: 100%;
+          margin: 30px 0;
+        }
+      }
+
+      &:last-child {
+        @include maxWidth(1199px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footer__contentHeader {
+    color: $pink;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+
+  .footer__contentLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__contentLink {
+    color: $white;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  .footer__contentForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 45px;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  .footer__input {
+    border: none;
+    outline: none;
+    background-color: $white;
+    width: 70%;
+    padding: 0.7rem;
+    height: 100%;
+
+    @include maxWidth(767px) {
+      width: calc(100% - 100px);
+    }
+  }
+
+  .footer__formBtn {
+    background-color: $pink;
+    color: $white;
+    height: 100%;
+    padding: 0;
+    width: 30%;
+
+    @include maxWidth(767px) {
+      width: 100px;
+    }
+  }
+
+  .footer__contentImgContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    @include maxWidth(1199px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .footer__contentImageDiv {
+    width: 70px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include maxWidth(1199px) {
+      width: 30%;
+    }
+
+    @include maxWidth(767px) {
+      width: 45%;
+    }
+
+    &:hover {
+      .footer__contentImage {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .footer__contentImage {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .footer__footer {
+    background-color: $footerBg2;
+    padding: 20px 0;
+    color: $white;
+    text-align: center;
+  }
+}

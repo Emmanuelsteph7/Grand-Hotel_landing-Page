@@ -1,0 +1,72 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.headerStyle {
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  padding-bottom: 25px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $pink;
+    height: 2px;
+  }
+
+  &:before {
+    bottom: 0;
+    width: 50px;
+    left: calc(50% - 25px);
+  }
+
+  &:after {
+    bottom: -8px;
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+}
+
+.btn {
+  border: 1px solid $pink;
+  color: $pink;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  .fa-chevron-right {
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .fa-chevron-right {
+      transform: translateX(5px);
+    }
+  }
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,151 @@
+.aside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100vh;
+  z-index: 3;
+  background: linear-gradient(
+      to top,
+      rgba(34, 32, 41, 1),
+      rgba(34, 32, 41, 0.8)
+    ),
+    url(../../img/nav-bg.jpeg) center no-repeat;
+  transition: 0.3s ease-in-out;
+
+  @include maxWidth(991px) {
+    width: 40%;
+  }
+
+  @include maxWidth(767px) {
+    width: 60%;
+  }
+
+  @include maxWidth(575px) {
+    width: 90%;
+  }
+
+  &.show {
+    left: 60px;
+
+    @include maxWidth(575px) {
+      left: 40px;
+    }
+  }
+
+  .aside__container {
+    padding: 25px 40px 20px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxWidth(575px) {
+      padding: 25px 20px 20px;
+    }
+  }
+
+  .aside__head {
+    width: 100%;
+  }
+
+  .aside__header {
+    color: $pink;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+  }
+
+  .aside__formGroup {
+    position: relative;
+    display: flex;
+  }
+
+  .aside__input {
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.7rem;
+    outline: none;
+    background-color: $dark;
+    border: 1px solid lighten($pink, 20%);
+    padding-left: 1.3rem;
+  }
+
+  .fa-search {
+    position: absolute;
+    right: 17px;
+    color: $pink;
+    top: calc(50% - 9px);
+  }
+
+  .aside__body {
+    width: 50%;
+    @include maxWidth(1199px) {
+      width: 80%;
+    }
+  }
+
+  .aside__linkContainer {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+
+    &:hover {
+      &:before,
+      &:after {
+        width: 50%;
+      }
+
+      .aside__linkSpan {
+        color: $pink;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      top: calc(50% - 1px);
+      background-color: $pink;
+      height: 2px;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  .aside__link {
+    color: $white;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .aside__linkSpan {
+    z-index: 2;
+    padding: 0 10px;
+    position: relative;
+    background-color: rgba(34, 32, 41, 1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .aside__footerParagraph {
+    align-items: center;
+    font-size: 0.8rem;
+    color: $white;
+
+    @include maxWidth(575px) {
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "./helpers";
+
+@mixin animateDown {
+  opacity: 0;
+  animation: animateDown 1.5s forwards;
+}
+
+@mixin maxWidth($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
+}
+
+@mixin minWidth($arg) {
+  @media screen and (min-width: $arg) {
+    @content;
+  }
+}

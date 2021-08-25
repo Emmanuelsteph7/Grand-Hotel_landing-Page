@@ -1,0 +1,18 @@
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./sections/header";
+.main {
+  margin-left: 60px;
+
+  @include maxWidth(575px) {
+    margin-left: 40px;
+  }
+}
+@import "./sections/navbar";
+@import "./sections/aside";
+@import "./sections/about";
+@import "./sections/rooms";
+@import "./sections/customers";
+@import "./sections/footer";

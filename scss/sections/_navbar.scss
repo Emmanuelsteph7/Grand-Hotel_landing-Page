@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100vh;
+  z-index: 4;
+  background-color: $darkWhite;
+
+  @include maxWidth(575px) {
+    width: 40px;
+  }
+
+  .navbar__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .navbar__toggle {
+    &.show {
+      .navbar__toggleIcon {
+        &:nth-child(1) {
+          transform: rotate(405deg) translate(9px, 7px);
+
+          @include maxWidth(575px) {
+            transform: rotate(405deg) translate(7px, 7px);
+          }
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-405deg) translate(6px, -4px);
+
+          @include maxWidth(575px) {
+            transform: rotate(-405deg) translate(5px, -5px);
+          }
+        }
+      }
+    }
+  }
+
+  .navbar__toggleContainer {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    @include maxWidth(575px) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .navbar__toggleIcon {
+    width: 75%;
+    margin: 4px 0;
+    height: 1px;
+    background-color: $dark;
+    transition: 0.3s ease-in-out;
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar__contentIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include maxWidth(575px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    i {
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      width: 120%;
+      height: 120%;
+      position: absolute;
+      background-color: $pink;
+      left: -150%;
+      top: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: $white;
+
+      &:before {
+        transform: rotate(360deg);
+        left: -30%;
+        top: -30%;
+      }
+    }
+  }
+
+  .navbar__contentIcon:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .navbar__footer {
+    font-size: 0.8rem;
+  }
+}

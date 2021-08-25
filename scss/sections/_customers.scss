@@ -1,0 +1,75 @@
+.customers {
+  background-color: $darkBlueBg;
+  padding: 60px 0;
+  color: $white;
+
+  .customers__header {
+    color: $pink;
+    margin-bottom: 50px;
+  }
+
+  .customers__paragraph {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .customers__testimonials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+
+    @include maxWidth(991px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .customers__card {
+    width: 40%;
+    position: relative;
+    background-color: $darkWhite;
+    color: $darkBlueBg;
+    padding: 15px;
+
+    @include maxWidth(991px) {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .customers__cardImageDiv {
+    width: 160px;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+
+    @include maxWidth(767px) {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  .customers__carImage {
+    width: 100%;
+  }
+
+  .customers__cardBody {
+    margin-left: 150px;
+
+    @include maxWidth(767px) {
+      margin: 0;
+    }
+  }
+
+  .customers__cardHeader {
+    font-weight: 500;
+  }
+
+  .customers__status {
+    margin: 20px 0;
+    color: $pink;
+    font-weight: 500;
+  }
+}

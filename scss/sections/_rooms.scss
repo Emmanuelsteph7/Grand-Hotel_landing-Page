@@ -1,0 +1,103 @@
+.rooms {
+  .rooms__container {
+    padding: 50px 0;
+  }
+
+  .rooms__header {
+    color: $pink;
+    margin-bottom: 50px;
+  }
+
+  .rooms__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+
+    @include maxWidth(992px) {
+      justify-content: center;
+    }
+  }
+
+  .rooms__card {
+    width: 40%;
+    margin-bottom: 30px;
+    color: $darkWhite;
+    background-color: $darkBlueBg;
+    box-shadow: 2px 10px 25px rgba(0, 0, 0, 0.5);
+
+    @include maxWidth(992px) {
+      width: 80%;
+    }
+  }
+
+  .rooms__cardImageDiv {
+    width: 100%;
+  }
+
+  .rooms__cardImage {
+    width: 100%;
+  }
+
+  .rooms__cardBodyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 25px;
+    height: 170px;
+
+    @include maxWidth(767px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .rooms__cardBodyContent1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+
+    @include maxWidth(767px) {
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  .rooms__cardHeader {
+    font-weight: 400;
+    margin-bottom: 7px;
+  }
+
+  .rooms__cardText {
+    font-size: 0.7rem;
+  }
+
+  .rooms__cardBodyContent1BtnDiv {
+    @include maxWidth(767px) {
+      margin-top: 10px;
+    }
+  }
+
+  .rooms__cardBtn {
+    background-color: $darkBlueBg;
+    border-radius: 20px;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  .rooms__cardBodyAmount {
+    font-weight: 400;
+
+    @include maxWidth(767px) {
+      text-align: right;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  .rooms__btnCheckDiv {
+    text-align: center;
+  }
+}
