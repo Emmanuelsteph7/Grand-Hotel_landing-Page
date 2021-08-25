@@ -1,6 +1,12 @@
 # Grand-Hotel_landing-Page
 
-This is a simple landing page template that has simple but nice animations and clean layouts.
+This is a simple landing page template.
+
+## Features
+
+- Responsive Web Page
+- Clean Layouts
+- Nice Animations
 
 ## Technologies Used
 
